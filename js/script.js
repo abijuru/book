@@ -54,5 +54,19 @@ $(document).ready(function() {
     });
   });
   
+  Address.prototype.fullAddress = function() {
+    return this.street + ", " + this.city + ", " + this.county;
+  }
+  $("ul#addresses").append("<li>" + address.street + ", " + address.city + " " + address.county + "</li>");
+
+  $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
+
+  function resetFields() {
+    $("input#new-first-name").val("");
+    $("input#new-last-name").val("");
+    $("input.new-street").val("");
+    $("input.new-city").val("");
+    $("input.new-county").val("");
+}
 
 
