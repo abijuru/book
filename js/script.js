@@ -24,3 +24,15 @@ $(document).ready(function() {
         var newAddress = new Address(inputtedStreet, inputtedCity, inputtedCounty);
         newContact.addresses.push(newAddress);
       });
+
+
+      $("ul#addresses").text("");
+      newContact.addresses.forEach(function(address) {
+        $("ul#addresses").append("<li>" + address.street + ", " + address.city + " " + address.County + "</li>");
+      });
+
+
+
+
+
+
